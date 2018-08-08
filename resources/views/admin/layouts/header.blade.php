@@ -13,7 +13,20 @@
     <!-- Ionicons -->
     <link rel="stylesheet" href="{{ url('/design/adminLte/bower_components/Ionicons/css/ionicons.min.css') }}">
     <!-- Theme style -->
-    <link rel="stylesheet" href="{{ url('/design/adminLte/dist/css/AdminLTE.min.css') }}">
+    @if(direction() == 'ltr')
+        <link rel="stylesheet" href="{{ url('/design/adminLte/dist/css/AdminLTE.min.css') }}">
+    @else
+        <link rel="stylesheet" href="{{ url('/design/adminLte/dist/css/rtl/AdminLTE.min.css') }}">
+        <link rel="stylesheet" href="{{ url('/design/adminLte/dist/css/rtl/bootstrap-rtl.min.css') }}">
+        <link rel="stylesheet" href="{{ url('/design/adminLte/dist/css/rtl/rtl.css') }}">
+        {{--<link rel="stylesheet" href="{{ url('/design/adminLte/dist/css/fonts/fonts-fa.css') }}">--}}
+        <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+        <style>
+            body, html {
+                font-family: 'Merriweather', serif;
+            }
+        </style>
+    @endif
     <!-- AdminLTE Skins. Choose a skin from the css/skins
          folder instead of downloading all of them to reduce the load. -->
     <link rel="stylesheet" href="{{ url('/design/adminLte/dist/css/skins/_all-skins.min.css') }}">
@@ -22,12 +35,16 @@
     <!-- jvectormap -->
     <link rel="stylesheet" href="{{ url('/design/adminLte/bower_components/jvectormap/jquery-jvectormap.css') }}">
     <!-- Date Picker -->
-    <link rel="stylesheet" href="{{ url('/design/adminLte/bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css') }}">
+    <link rel="stylesheet"
+          href="{{ url('/design/adminLte/bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css') }}">
     <!-- Daterange picker -->
-    <link rel="stylesheet" href="{{ url('/design/adminLte/bower_components/bootstrap-daterangepicker/daterangepicker.css') }}">
+    <link rel="stylesheet"
+          href="{{ url('/design/adminLte/bower_components/bootstrap-daterangepicker/daterangepicker.css') }}">
 
-    <link rel="stylesheet" href="{{ url('/design/adminLte/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css') }}">
-    <link rel="stylesheet" href="{{ url('/design/adminLte/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css') }}">
+    <link rel="stylesheet"
+          href="{{ url('/design/adminLte/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css') }}">
+    <link rel="stylesheet"
+          href="{{ url('/design/adminLte/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css') }}">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -38,7 +55,8 @@
 
 
     <!-- Google Font -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
 <div class="wrapper">

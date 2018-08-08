@@ -31,4 +31,10 @@ return [
     'sPrevious' => 'Previous',
     'sSortAscending' => 'Sort Ascending',
     'sSortDescending' => 'Sort Descending',
+    'edit' => 'Edit',
+    'delete' => 'Delete',
+    'admin_name' => 'Admin Name',
+    'admin_email' => 'Admin Email',
+    'created_at' => 'created at',
+    'updated_at' => 'updated at',
 ];

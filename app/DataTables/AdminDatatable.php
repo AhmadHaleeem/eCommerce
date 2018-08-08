@@ -37,6 +37,7 @@ class AdminDatatable extends DataTable
 
 
 
+
     /**
      * Optional method if you want to use html builder.
      *
@@ -73,9 +74,7 @@ class AdminDatatable extends DataTable
                                 
                             });
                             }",
-                'language' => [
-                    'url' => aurl('datatable/lang')
-                ]
+                'language' => datatable_lang()
             ]);
     }
 
@@ -95,27 +94,27 @@ class AdminDatatable extends DataTable
             [
                 'name' => 'name',
                 'data' => 'name',
-                'title' => 'Admin Name',
+                'title' => trans('admin.admin_name'),
             ],
             [
                 'name' => 'email',
                 'data' => 'email',
-                'title' => 'Admin Email',
+                'title' => trans('admin.admin_email'),
             ],
             [
                 'name' => 'created_at',
                 'data' => 'created_at',
-                'title' => 'created at',
+                'title' => trans('admin.created_at'),
             ],
             [
                 'name' => 'updated_at',
                 'data' => 'updated_at',
-                'title' => 'updated at',
+                'title' => trans('admin.updated_at'),
             ],
             [
                 'name' => 'edit',
                 'data' => 'edit',
-                'title' => 'Edit',
+                'title' => trans('admin.edit'),
                 'exportable' => false,
                 'printable' => false,
                 'orderable' => false,
@@ -124,7 +123,7 @@ class AdminDatatable extends DataTable
             [
                 'name' => 'delete',
                 'data' => 'delete',
-                'title' => 'Delete',
+                'title' => trans('admin.delete'),
                 'exportable' => false,
                 'printable' => false,
                 'orderable' => false,
